@@ -1,0 +1,25 @@
+<h2  class="tabl">High Score</h2>
+{{#if scores}}
+<div class="tabl">
+    <table class="striped ">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each scores}}
+                <tr>
+                    <td>{{player.firstName}}</td>
+                    <td>{{createdAt }}</td>
+                    <td><span class="dash-status">{{score}}</span></td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+{{else}}
+    <p>No players Played</p>
+{{/if}}
